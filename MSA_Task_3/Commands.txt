@@ -1,0 +1,41 @@
+http://localhost:8080/references
+
+fetch('/references').then(response => response.json().then(console.log))
+
+fetch(
+  '/references', 
+  { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sysname: 'refsysname1', name: 'ref name 1', description: 'description 1' })
+  }
+).then(result => console.log(result))
+
+fetch(
+  '/references', 
+  { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sysname: 'refsysname2', name: 'ref name 2', description: 'description 2' })
+  }
+).then(result => console.log(result))
+
+fetch('/references').then(response => response.json().then(console.log))
+
+fetch('/references/1').then(response => response.json().then(console.log))
+fetch('/references/2').then(response => response.json().then(console.log))
+
+fetch(
+  '/references/2', 
+  { 
+    method: 'PUT', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sysname: 'refsysname3', name: 'ref name 3', description: 'description 3' })
+  }
+).then(result => console.log(result))
+
+fetch('/references/2').then(response => response.json().then(console.log))
+
+fetch('/references/2', {method: 'DELETE'}).then(response => response.json().then(console.log))
+
+fetch('/references').then(response => response.json().then(console.log))
