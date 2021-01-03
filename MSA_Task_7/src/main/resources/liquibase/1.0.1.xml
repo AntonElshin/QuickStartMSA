@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <property name="autoIncrement" value="false" dbms="postgresql,mssql,oracle"/>
+    <property name="autoIncrement" value="true" dbms="h2"/>
+
+    <changeSet id="1.0.1-dropReferenceTableV1" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <columnExists tableName="REF_REFERENCE" columnName="REFERENCEID"/>
+                <columnExists tableName="REF_REFERENCE" columnName="REFERENCENAME"/>
+                <columnExists tableName="REF_REFERENCE" columnName="REFSYSNAME"/>
+                <columnExists tableName="REF_REFERENCE" columnName="DESCRIPTION"/>
+            </and>
+        </preConditions>
+
+        <dropTable tableName="REF_REFERENCE"/>
+        <dropSequence sequenceName="REF_REFERENCE_SEQ"/>
+    </changeSet>
+
+    <!--Таблица справочников-->
+    <changeSet author="aelshin" id="1.0.1-createReferenceTableV1">
+        <createSequence sequenceName="REF_REFERENCE_SEQ" incrementBy="1" startValue="1"/>
+        <createTable tableName="REF_REFERENCE">
+            <column autoIncrement="${autoIncrement}" name="REFERENCEID" type="INT"
+                    defaultValueSequenceNext="REF_REFERENCE_SEQ" remarks="Идентификатор справочника">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="REFERENCENAME" type="VARCHAR(256)" remarks="Название справочника">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REFSYSNAME" type="VARCHAR(256)" remarks="Системное наименование справочника">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(512)" remarks="Описание справочника">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <comment>Creation of REF_REFERENCE table</comment>
+    </changeSet>
+
+</databaseChangeLog>
