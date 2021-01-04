@@ -58,6 +58,10 @@ public class ReferenceServiceImpl implements ReferenceService {
     @Transactional
     public ReferenceDTO modify(Long id, ReferenceDTO referenceDTO) throws BusinessException {
 
+        if(id == null) {
+            throw new BusinessException(Errors.IDENTIFIER_IS_NULL, id);
+        }
+
         ReferenceEntity referenceEntity = checkReferenceForModify(id, referenceDTO);
         referenceDTO.setId(id);
 
@@ -68,6 +72,11 @@ public class ReferenceServiceImpl implements ReferenceService {
     @Override
     @Transactional
     public void delete(Long id) throws BusinessException {
+
+        if(id == null) {
+            throw new BusinessException(Errors.IDENTIFIER_IS_NULL, id);
+        }
+
         Optional<ReferenceEntity> foundReference = referenceRepository.findById(id);
         if(!foundReference.isPresent()) {
             throw new BusinessException(Errors.REFERENCE_NOT_FOUND_BY_ID, id);
