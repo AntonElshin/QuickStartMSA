@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <property name="autoIncrement" value="false" dbms="postgresql,mssql,oracle"/>
+    <property name="autoIncrement" value="true" dbms="h2"/>
+
+    <!--Удаление таблицы справочников-->
+    <changeSet id="1.0.1-dropReferenceTableV1" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <columnExists tableName="REF_REFERENCE" columnName="REFERENCEID"/>
+                <columnExists tableName="REF_REFERENCE" columnName="REFERENCENAME"/>
+                <columnExists tableName="REF_REFERENCE" columnName="REFSYSNAME"/>
+                <columnExists tableName="REF_REFERENCE" columnName="DESCRIPTION"/>
+            </and>
+        </preConditions>
+
+        <dropTable tableName="REF_REFERENCE"/>
+        <dropSequence sequenceName="REF_REFERENCE_SEQ"/>
+    </changeSet>
+
+    <!--Удаление таблицы ролей-->
+    <changeSet id="1.0.1-dropUserRoleTableV1" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <columnExists tableName="CORE_USERROLE" columnName="ROLEID"/>
+                <columnExists tableName="CORE_USERROLE" columnName="ROLENAME"/>
+                <columnExists tableName="CORE_USERROLE" columnName="ROLESYSNAME"/>
+                <columnExists tableName="CORE_USERROLE" columnName="DESCRIPTION"/>
+            </and>
+        </preConditions>
+
+        <dropTable tableName="CORE_USERROLE"/>
+        <dropSequence sequenceName="CORE_USERROLE_SEQ"/>
+    </changeSet>
+
+    <!--Удаление таблицы пользователей-->
+    <changeSet id="1.0.1-dropUserAccountTableV1" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <columnExists tableName="CORE_USERACCOUNT" columnName="USERACCOUNTID"/>
+                <columnExists tableName="CORE_USERACCOUNT" columnName="LOGIN"/>
+                <columnExists tableName="CORE_USERACCOUNT" columnName="PASSWORD"/>
+                <columnExists tableName="CORE_USERACCOUNT" columnName="STATUS"/>
+            </and>
+        </preConditions>
+
+        <dropTable tableName="CORE_ROLEACCOUNT"/>
+        <dropSequence sequenceName="CORE_USERACCOUNT_SEQ"/>
+    </changeSet>
+
+    <!--Удаление таблицы связи ролей и пользователей-->
+    <changeSet id="1.0.1-dropRoleAccountTableV1" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <and>
+                <columnExists tableName="CORE_ROLEACCOUNT" columnName="LINKID"/>
+                <columnExists tableName="CORE_ROLEACCOUNT" columnName="USERACCOUNTID"/>
+                <columnExists tableName="CORE_ROLEACCOUNT" columnName="ROLEID"/>
+            </and>
+        </preConditions>
+
+        <dropTable tableName="CORE_ROLEACCOUNT"/>
+        <dropSequence sequenceName="CORE_ROLEACCOUNT_SEQ"/>
+    </changeSet>
+
+    <!--Таблица справочников-->
+    <changeSet author="aelshin" id="1.0.1-createReferenceTableV1">
+        <createSequence sequenceName="REF_REFERENCE_SEQ" incrementBy="1" startValue="1"/>
+        <createTable tableName="REF_REFERENCE">
+            <column autoIncrement="${autoIncrement}" name="REFERENCEID" type="INT"
+                    defaultValueSequenceNext="REF_REFERENCE_SEQ" remarks="Идентификатор справочника">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="REFERENCENAME" type="VARCHAR(256)" remarks="Название справочника">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REFSYSNAME" type="VARCHAR(256)" remarks="Системное наименование справочника">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(512)" remarks="Описание справочника">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <comment>Creation of REF_REFERENCE table</comment>
+    </changeSet>
+
+    <!--Таблица ролей-->
+    <changeSet author="aelshin" id="1.0.1-createUserRoleTableV1">
+        <createSequence sequenceName="CORE_USERROLE_SEQ" incrementBy="1" startValue="1"/>
+        <createTable tableName="CORE_USERROLE">
+            <column autoIncrement="${autoIncrement}" name="ROLEID" type="INT"
+                    defaultValueSequenceNext="CORE_USERROLE_SEQ" remarks="Идентификатор роли">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="ROLENAME" type="VARCHAR(256)" remarks="Название роли">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ROLESYSNAME" type="VARCHAR(256)" remarks="Системное наименование роли">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR(512)" remarks="Описание справочника">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <comment>Creation of CORE_USERROLE table</comment>
+    </changeSet>
+
+    <!--Добавление роли администратора-->
+    <changeSet author="aelshin" id="1.0.1-insertAdminRoleV1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(ROLEID) FROM CORE_USERROLE WHERE ROLESYSNAME = 'ADMIN'
+            </sqlCheck>
+        </preConditions>
+
+        <insert tableName="CORE_USERROLE">
+            <column name="ROLEID">1</column>
+            <column name="ROLENAME">Администратор</column>
+            <column name="ROLESYSNAME">admin</column>
+            <column name="DESCRIPTION">Администратор</column>
+        </insert>
+
+    </changeSet>
+
+    <!--Таблица пользователей-->
+    <changeSet author="aelshin" id="1.0.1-createUserAccountTableV1">
+        <createSequence sequenceName="CORE_USERACCOUNT_SEQ" incrementBy="1" startValue="1"/>
+        <createTable tableName="CORE_USERACCOUNT">
+            <column autoIncrement="${autoIncrement}" name="USERACCOUNTID" type="INT"
+                    defaultValueSequenceNext="CORE_USERACCOUNT_SEQ" remarks="Идентификатор роли">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="LOGIN" type="VARCHAR(256)" remarks="Логин пользователя">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PASSWORD" type="VARCHAR(256)" remarks="Пароль пользователя">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(20)" remarks="Статус пользователя">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <comment>Creation of CORE_USERROLE table</comment>
+    </changeSet>
+
+    <!--Добавление роли администратора-->
+    <changeSet author="aelshin" id="1.0.1-insertAdminAccountV1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(USERACCOUNTID) FROM CORE_USERACCOUNT WHERE LOGIN = 'admin'
+            </sqlCheck>
+        </preConditions>
+
+        <insert tableName="CORE_USERACCOUNT">
+            <column name="USERACCOUNTID">1</column>
+            <column name="LOGIN">admin</column>
+            <column name="PASSWORD">$2a$10$aa7LtAqXeRnbs85FJCf0zutJeWyHudhpx1txB8BxcYMjluX/Rx.5q</column> <!--admin-->
+            <column name="STATUS">ACTIVE</column>
+        </insert>
+
+    </changeSet>
+
+    <!--Таблица связи ролей и пользователей-->
+    <changeSet author="aelshin" id="1.0.1-createRoleAccountTableV1">
+        <createSequence sequenceName="CORE_ROLEACCOUNT_SEQ" incrementBy="1" startValue="1"/>
+        <createTable tableName="CORE_ROLEACCOUNT">
+            <column autoIncrement="${autoIncrement}" name="LINKID" type="INT"
+                    defaultValueSequenceNext="CORE_ROLEACCOUNT_SEQ" remarks="Идентификатор связи роли и пользователя">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="USERACCOUNTID" type="INT" remarks="Идентификатор пользователей">
+                <constraints nullable="false" foreignKeyName="fk_useraccount" references="CORE_USERACCOUNT(USERACCOUNTID)"/>
+            </column>
+            <column name="ROLEID" type="INT" remarks="Идентификатор роли">
+                <constraints nullable="false" foreignKeyName="fk_role" references="CORE_USERROLE(ROLEID)"/>
+            </column>
+        </createTable>
+
+        <comment>Creation of CORE_ROLEACCOUNT table</comment>
+    </changeSet>
+
+    <!--Добавление роли администратора-->
+    <changeSet author="aelshin" id="1.0.1-insertAdminRoleAccountV1">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(ROLEID) FROM CORE_ROLEACCOUNT WHERE USERACCOUNTID = 1 AND ROLEID = 1
+            </sqlCheck>
+        </preConditions>
+
+        <insert tableName="CORE_ROLEACCOUNT">
+            <column name="LINKID">1</column>
+            <column name="USERACCOUNTID">1</column>
+            <column name="ROLEID">1</column>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>

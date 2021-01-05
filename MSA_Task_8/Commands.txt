@@ -1,0 +1,4 @@
+http://localhost:8080/index - защищённая страница
+Логин/пароль: admin/admin
+
+http://localhost:8080/logout - разлогиниться
