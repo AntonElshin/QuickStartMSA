@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    cloud:
+      stream:
+        binders:
+          binderName:
+            type: kafka
+        bindings:
+          demoRequest:
+            destination: demo
+            group: task

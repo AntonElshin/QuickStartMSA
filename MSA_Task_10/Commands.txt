@@ -1,0 +1,5 @@
+kafka-topics.bat --create --topic demo --bootstrap-server localhost:9092
+
+kafka-topics.bat --describe --topic demo --bootstrap-server localhost:9092
+
+kafka-console-producer.bat --topic demo --bootstrap-server localhost:9092
