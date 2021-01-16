@@ -39,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         if (securityEnabled) {
             http
+                    .csrf().disable()
                     .authorizeRequests()
                     .antMatchers("/", "/v2/api-docs", "/swagger-resources/configuration/ui", "/configuration/ui", "/swagger-resources", "/swagger-resources/configuration/security", "/configuration/security", "/swagger-ui.html").permitAll()
                     .anyRequest().authenticated()
@@ -48,7 +49,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll();
         }
         else {
-            http.authorizeRequests().antMatchers("/**").permitAll();
+            http
+                    .csrf().disable()
+                    .authorizeRequests().antMatchers("/**").permitAll();
         }
     }
 
