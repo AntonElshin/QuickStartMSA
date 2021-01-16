@@ -1,11 +1,10 @@
 package ru.diasoft.task.service;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
-import org.checkerframework.checker.nullness.Opt;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +14,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import ru.diasoft.task.dto.ReferenceDTO;
 import ru.diasoft.task.entity.QReferenceEntity;
 import ru.diasoft.task.entity.ReferenceEntity;
@@ -23,13 +22,10 @@ import ru.diasoft.task.exceptions.BusinessException;
 import ru.diasoft.task.mappers.ReferenceMapper;
 import ru.diasoft.task.repository.ReferenceRepository;
 
-import org.mockito.*;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
 
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles("test")
 public class ReferenceServiceTest {
@@ -57,7 +53,7 @@ public class ReferenceServiceTest {
         return referenceEntity;
     }
 
-    @Before
+    @BeforeEach
     public void setUp() {
 
         create = createTestReference();
@@ -172,58 +168,75 @@ public class ReferenceServiceTest {
 
     }
 
-    @Test(expected = BusinessException.class)
+    @Test
     public void findByIdNotFoundErrorTest() throws Exception {
 
-        Long id = 2L;
+        Assertions.assertThrows(BusinessException.class, () -> {
 
-        Mockito.when(referenceRepository.findById(id)).thenReturn(Optional.empty());
+            Long id = 2L;
 
-        referenceService.findById(id);
+            Mockito.when(referenceRepository.findById(id)).thenReturn(Optional.empty());
+
+            referenceService.findById(id);
+
+        });
 
     }
 
-    @Test(expected = BusinessException.class)
+    @Test
     public void modifyIdNullErrorTest() throws Exception {
 
-        Long id = update.getId();
-        update.setSysname("uniq_sysname_1");
-        ReferenceDTO referenceDTO = ReferenceMapper.INSTANCE.toDto(update);
+        Assertions.assertThrows(BusinessException.class, () -> {
 
-        referenceService.modify(null, referenceDTO);
+            Long id = update.getId();
+            update.setSysname("uniq_sysname_1");
+            ReferenceDTO referenceDTO = ReferenceMapper.INSTANCE.toDto(update);
 
+            referenceService.modify(null, referenceDTO);
+
+        });
     }
 
-    @Test(expected = BusinessException.class)
+    @Test
     public void deleteByIdNullErrorTest() throws Exception {
 
-        referenceService.delete(null);
+        Assertions.assertThrows(BusinessException.class, () -> {
 
+            referenceService.delete(null);
+
+        });
     }
 
-    @Test(expected = BusinessException.class)
+    @Test
     public void deleteByIdNotFoundErrorTest() throws Exception {
 
-        Long id = 2L;
+        Assertions.assertThrows(BusinessException.class, () -> {
 
-        Mockito.when(referenceRepository.findById(id)).thenReturn(Optional.empty());
-        Mockito.doNothing().when(referenceRepository).deleteById(id);
+            Long id = 2L;
 
-        referenceService.delete(id);
+            Mockito.when(referenceRepository.findById(id)).thenReturn(Optional.empty());
+            Mockito.doNothing().when(referenceRepository).deleteById(id);
+
+            referenceService.delete(id);
+
+        });
 
     }
 
-    @Test(expected = BusinessException.class)
+    @Test
     public void createDuplicateSysnameErrorTest() throws Exception {
 
-        ReferenceDTO referenceDTO = ReferenceMapper.INSTANCE.toDto(create);
+        Assertions.assertThrows(BusinessException.class, () -> {
 
-        Mockito.doNothing().when(validationService).validateDTO(referenceDTO);
-        Mockito.when(referenceRepository.findBySysnameEquals(create.getSysname())).thenReturn(Optional.ofNullable(create));
-        Mockito.when(referenceRepository.save(create)).thenReturn(null);
+            ReferenceDTO referenceDTO = ReferenceMapper.INSTANCE.toDto(create);
 
-        ReferenceDTO createDTO = referenceService.create(referenceDTO);
+            Mockito.doNothing().when(validationService).validateDTO(referenceDTO);
+            Mockito.when(referenceRepository.findBySysnameEquals(create.getSysname())).thenReturn(Optional.ofNullable(create));
+            Mockito.when(referenceRepository.save(create)).thenReturn(null);
 
+            ReferenceDTO createDTO = referenceService.create(referenceDTO);
+
+        });
     }
 
 }
