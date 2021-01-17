@@ -18,9 +18,9 @@ public interface UserRepository extends PagingAndSortingRepository<UserEntity, L
     @Override
     default void customize(QuerydslBindings bindings, QUserEntity qEntity) {
         bindings.bind(qEntity.login)
-                .first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
+                .first((SingleValueBinding<StringPath, String>) StringExpression::equalsIgnoreCase);
         bindings.bind(qEntity.status)
-                .first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
+                .first((SingleValueBinding<StringPath, String>) StringExpression::equalsIgnoreCase);
     }
 
     Optional<UserEntity> findByLoginEqualsAndStatusEquals(String login, String status);
