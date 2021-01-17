@@ -1,0 +1,2 @@
+docker search hello-world
+docker run hello-world

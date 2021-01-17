@@ -1,0 +1,7 @@
+Step 5 ///////////////////////////////
+docker build -t my-nginx-image:latest .
+docker images
+
+Step 6 ///////////////////////////////
+docker run -d -p 80:80 my-nginx-image:latest
+curl -i http://localhost:80

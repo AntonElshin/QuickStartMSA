@@ -1,0 +1,7 @@
+Step 2 ///////////////////////////////
+docker build -t webserver-image:v1 .
+docker images
+
+Step 3 ///////////////////////////////
+docker run -d -p 80:80 webserver-image:v1
+curl http://localhost:80
