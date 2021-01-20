@@ -1,0 +1,4 @@
+ru\diasoft\micro\config\ServletInitializer.class
+ru\diasoft\micro\config\RestTemplateConfig.class
+ru\diasoft\micro\config\SecurityConfig.class
+ru\diasoft\micro\TaskApplication.class
