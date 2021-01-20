@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: ${SERVICE_NAME:task}
-
-mdp.discovery:
-  discoveryClientName: ${DISCOVERY_CLIENT_NAME:disable}
