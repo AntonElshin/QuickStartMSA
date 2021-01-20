@@ -22,7 +22,7 @@ import ru.diasoft.micro.lib.utils.response.RESTStatus;
 import ru.diasoft.micro.service.SmsVerificationService;
 
 @RestController("ru.diasoft.micro.controller.SmsVerificationController")
-@Api(tags = {"SmsVerification"})
+@Api(tags = {"QArcherDemo"})
 public class SmsVerificationController {
 
     private final SmsVerificationService smsVerificationService;

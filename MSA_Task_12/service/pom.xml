@@ -59,8 +59,8 @@
                             <goal>qarcher</goal>
                         </goals>
                         <configuration>
-                            <skip>true</skip>
-                            <serviceName>SmsVerification</serviceName>
+                            <skip>false</skip>
+                            <serviceName>QArcherDemo</serviceName>
                             <qarcherService>http://dsagregator2:8030</qarcherService>
                             <targetPackage>ru.diasoft.micro</targetPackage>
                             <qarcherModuleName>DQ Hackathon Tutorial</qarcherModuleName>
@@ -81,7 +81,7 @@
                             <goal>qarcher</goal>
                         </goals>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>true</skip>
                             <serviceName>SmsVerification</serviceName>
                             <qarcherService>http://dsagregator2:8050</qarcherService>
                             <targetPackage>ru.diasoft.micro</targetPackage>
@@ -91,6 +91,36 @@
                             <!--    -->
                             <asyncApi>true</asyncApi>
                             <useZonedDateTime>true</useZonedDateTime>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Generate Events Publisher</id>
+                        <!-- DQCodeGen+Event-Driven Architectures (EDA). conf.diasoft.ru/pages/viewpage.action?pageId=50894482 -->
+                        <goals>
+                            <goal>local</goal>
+                        </goals>
+                        <configuration>
+                            <skip>false</skip>
+                            <!--<serviceName>${project.artifactId}</serviceName>-->
+                            <targetPackage>${project.groupId}</targetPackage>
+                            <!--<targetFolder>${project.build.directory}/generated-sources/dqcodegen</targetFolder>-->
+                            <!--<swaggerFile>${project.basedir}/src/main/resources/swagger.yml</swaggerFile>-->
+                            <asyncApiFile>${project.basedir}/src/main/resources/event-publisher.yml</asyncApiFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Generate Events Subsriber</id>
+                        <!-- DQCodeGen+Event-Driven Architectures (EDA). conf.diasoft.ru/pages/viewpage.action?pageId=50894482 -->
+                        <goals>
+                            <goal>local</goal>
+                        </goals>
+                        <configuration>
+                            <skip>false</skip>
+                            <!--<serviceName>${project.artifactId}</serviceName>-->
+                            <targetPackage>${project.groupId}</targetPackage>
+                            <!--<targetFolder>${project.build.directory}/generated-sources/dqcodegen</targetFolder>-->
+                            <!--<swaggerFile>${project.basedir}/src/main/resources/swagger.yml</swaggerFile>-->
+                            <asyncApiFile>${project.basedir}/src/main/resources/event-subscriber.yml</asyncApiFile>
                         </configuration>
                     </execution>
                 </executions>

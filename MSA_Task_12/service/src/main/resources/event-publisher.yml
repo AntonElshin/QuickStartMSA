@@ -11,7 +11,7 @@ components:
   messages:
     smsVerificationMessage:
       payload:
-        $ref: '#/components/schemas/smsVerificationMessage'	
+        $ref: '#/components/schemas/smsVerificationMessage'
   schemas:
     smsVerificationMessage:
       type: object
@@ -21,4 +21,4 @@ components:
         phoneNumber:
           type: string
         code:
-          type: string		
+          type: string

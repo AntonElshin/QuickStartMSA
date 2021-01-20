@@ -17,4 +17,4 @@ components:
       type: object
       properties:
         quid:
-          type: string		
+          type: string
