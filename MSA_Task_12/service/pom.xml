@@ -59,7 +59,7 @@
                             <goal>qarcher</goal>
                         </goals>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>true</skip>
                             <serviceName>QArcherDemo</serviceName>
                             <qarcherService>http://dsagregator2:8030</qarcherService>
                             <targetPackage>ru.diasoft.micro</targetPackage>
@@ -100,7 +100,7 @@
                             <goal>local</goal>
                         </goals>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>true</skip>
                             <!--<serviceName>${project.artifactId}</serviceName>-->
                             <targetPackage>${project.groupId}</targetPackage>
                             <!--<targetFolder>${project.build.directory}/generated-sources/dqcodegen</targetFolder>-->
@@ -115,7 +115,7 @@
                             <goal>local</goal>
                         </goals>
                         <configuration>
-                            <skip>false</skip>
+                            <skip>true</skip>
                             <!--<serviceName>${project.artifactId}</serviceName>-->
                             <targetPackage>${project.groupId}</targetPackage>
                             <!--<targetFolder>${project.build.directory}/generated-sources/dqcodegen</targetFolder>-->
