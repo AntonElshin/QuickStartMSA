@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ru.diasoft.fa.database:database-manager-core:9.04.03-20070201">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/fa/database/database-manager-core/9.04.03-20070201/database-manager-core-9.04.03-20070201.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/fa/database/database-manager-core/9.04.03-20070201/database-manager-core-9.04.03-20070201-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/fa/database/database-manager-core/9.04.03-20070201/database-manager-core-9.04.03-20070201-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

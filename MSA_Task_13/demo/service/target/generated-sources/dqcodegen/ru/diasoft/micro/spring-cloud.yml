@@ -1,7 +1,0 @@
-# Created by DQCodegen
-spring:
-  cloud:
-    stream:
-      bindings:
-        smsVerificationDeliveredSubscribe:
-          destination: sms-verification-delivered

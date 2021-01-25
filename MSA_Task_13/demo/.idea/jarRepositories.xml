@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="diasoft_repo" />
+      <option name="name" value="diasoft_repo" />
+      <option name="url" value="http://maven:8080/maven2/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="platform_repo" />
+      <option name="name" value="platform_repo" />
+      <option name="url" value="http://10.11.1.83:8080/archiva/repository/internal/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="centr" />
+      <option name="name" value="centr" />
+      <option name="url" value="http://repo1.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="diasoft_snap_repo" />
+      <option name="name" value="diasoft_snap_repo" />
+      <option name="url" value="http://cvssoa:8080/maven2/snap/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="diasoft_repo_old" />
+      <option name="name" value="diasoft_repo_old" />
+      <option name="url" value="http://cvssoa:8080/maven2/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="platformrepo-release" />
+      <option name="name" value="diasoft platform release repository" />
+      <option name="url" value="http://platformrepo:8080/repository/internal/" />
+    </remote-repository>
+  </component>
+</project>

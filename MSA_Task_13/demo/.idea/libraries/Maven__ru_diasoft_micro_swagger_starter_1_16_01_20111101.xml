@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ru.diasoft.micro:swagger-starter:1.16.01-20111101">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/micro/swagger-starter/1.16.01-20111101/swagger-starter-1.16.01-20111101.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/micro/swagger-starter/1.16.01-20111101/swagger-starter-1.16.01-20111101-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/ru/diasoft/micro/swagger-starter/1.16.01-20111101/swagger-starter-1.16.01-20111101-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
