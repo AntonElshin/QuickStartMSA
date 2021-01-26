@@ -8,5 +8,38 @@
     <property name="autoIncrement" value="true" dbms="h2"/>
 
 	<!-- Put your changesets here -->
+
+    <changeSet id="1.0.1-createSmsVerificationTable" author="aelshin">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="sms_verification"></tableExists>
+            </not>
+        </preConditions>
+        <createSequence sequenceName="sms_verification_seq" incrementBy="1" startValue="1"/>
+        <createTable tableName="sms_verification">
+            <column name="verificationId" type="NUMERIC(19,0)" autoIncrement="true" defaultValueSequenceNext="sms_verification_seq">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="processGUID" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phoneNumber" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="secretCode" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createIndex tableName="sms_verification" indexName="k01_sms_verification" unique="true">
+            <column name="processGUID"></column>
+        </createIndex>
+        <createIndex tableName="sms_verification" indexName="k02_sms_verification" unique="false">
+            <column name="secretCode"></column>
+            <column name="status"></column>
+        </createIndex>
+    </changeSet>
 		
 </databaseChangeLog>
