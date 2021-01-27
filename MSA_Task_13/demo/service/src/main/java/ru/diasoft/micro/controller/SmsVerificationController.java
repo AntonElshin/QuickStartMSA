@@ -35,14 +35,13 @@ public class SmsVerificationController {
     @GetMapping("/v1/sms-verification")
     @ApiOperation(value = "Метод проверяет, что введенный код соответствует отправленному.", response = SmsVerificationCheckResponse.class, tags = {"SmsVerification"})
     public ResponseEntity<SmsVerificationCheckResponse> dsSmsVerificationCheck(
-                @RequestBody
-                @ApiParam(name = "SmsVerificationCheckRequest", value = "", required = false)
-                SmsVerificationCheckRequest smsVerificationCheckRequest,
-                @ApiParam(value = "Field set for return") 
-                @RequestParam(value = "fields", required = false)
-                String fields) {
+            @RequestParam(name = "ProcessGUID") String processGUID,
+            @RequestParam(name = "Code") String code
+    ) {
+        SmsVerificationCheckRequest request = new SmsVerificationCheckRequest(processGUID, code);
+
         SmsVerificationCheckResponse result = smsVerificationService.dsSmsVerificationCheck(
-                smsVerificationCheckRequest);
+                request);
         if (result instanceof RESTStatus) {
             return ResponseEntity.status(((RESTStatus)result).getHttpStatus()).body(result);    
         } else {

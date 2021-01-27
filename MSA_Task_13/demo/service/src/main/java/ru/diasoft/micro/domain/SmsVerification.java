@@ -17,16 +17,16 @@ public class SmsVerification {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sms_verification_seq")
     @SequenceGenerator(name = "sms_verification_seq", sequenceName = "sms_verification_seq", allocationSize = 1)
-    @Column(name = "verificationid")
+    @Column(name = "verificationId")
     private Long verificationId;
 
-    @Column(name = "processguid")
+    @Column(name = "processGUID")
     private String processGuid;
 
-    @Column(name = "phonenumber")
+    @Column(name = "phoneNumber")
     private String phoneNumber;
 
-    @Column(name = "secretcode")
+    @Column(name = "secretCode")
     private String secretCode;
 
     @Column(name = "status")
