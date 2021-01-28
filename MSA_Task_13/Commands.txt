@@ -1,0 +1,35 @@
+http://localhost:8765/ - Eureka
+
+/////////////////////////////////////////////////
+Rest запросы для demo
+
+http://localhost:7081/
+
+fetch(
+  'http://localhost:7081/task/sms-verification', 
+  { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ PhoneNumber: '89159746095' })
+  }
+).then(result => console.log(result))
+
+
+fetch('http://localhost:7081/task/v1/sms-verification?Code=3933&ProcessGUID=27761ef0-ca53-4b2f-9ea0-af6ce2e133a5').then(response => response.json().then(console.log))
+
+/////////////////////////////////////////////////
+Rest запросы для demo
+
+http://localhost:7080/
+
+fetch(
+  'http://localhost:7080/sms-verification', 
+  { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ PhoneNumber: '89159746096' })
+  }
+).then(result => console.log(result))
+
+
+fetch('http://localhost:7080/v1/sms-verification?Code=3933&ProcessGUID=27761ef0-ca53-4b2f-9ea0-af6ce2e133a5').then(response => response.json().then(console.log))

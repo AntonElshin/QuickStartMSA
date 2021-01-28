@@ -49,7 +49,7 @@ public class SmsVerificationController {
         }
     }
 
-    @PostMapping("/v1/sms-verification")
+    @PostMapping("/sms-verification")
     @ApiOperation(value = "Отправка проверочного кода на телефон клиента.", response = SmsVerificationPostResponse.class, tags = {"SmsVerification"})
     public ResponseEntity<SmsVerificationPostResponse> dsSmsVerificationCreate(
                 @RequestBody
