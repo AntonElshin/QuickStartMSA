@@ -8,11 +8,11 @@ spring:
 zuul:
   routes:
     sms-verification:
-      path: /v1/sms-verification/**
-      url: http://localhost:7081/task/sms-verification/
+      path: /sms-verification/**
+      url: http://localhost:7081/demo/sms-verification/
     sms-verification-get:
       path: /v1/sms-verification/**
-      url: http://localhost:7081/task/v1/sms-verification/
+      url: http://localhost:7081/demo/v1/sms-verification/
 
 management:
   endpoints:

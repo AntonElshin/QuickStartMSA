@@ -1,7 +1,7 @@
 server:
   port: ${SERVICE_PORT}
   servlet:
-    context-path: /${SERVICE_NAME:task} 
+    context-path: /${SERVICE_NAME:demo}
     
 security:
   enabled: true

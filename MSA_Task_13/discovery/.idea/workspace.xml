@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ae7a1f10-9e38-457e-abce-a24985cbc28f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/controller/SmsVerificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/controller/SmsVerificationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gateway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" afterDir="false" />
@@ -79,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611822886070</updated>
-      <workItem from="1611822887318" duration="2732000" />
+      <workItem from="1611822887318" duration="4092000" />
     </task>
     <servers />
   </component>
