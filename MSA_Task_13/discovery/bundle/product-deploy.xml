@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product>
+    <sysname>discovery</sysname>
+    <name>discovery</name>
+
+    <modules>
+        <module>
+            <sysname>discovery</sysname>
+        </module>
+    </modules>
+</product>

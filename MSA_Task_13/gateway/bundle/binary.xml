@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+    <id>bundle</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <baseDirectory>gateway</baseDirectory>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+
+    <fileSets>
+       <fileSet>
+            <directory>.</directory>
+            <outputDirectory>Gateway</outputDirectory>
+            <includes>
+                <include>product-deploy.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>.</directory>
+            <outputDirectory>Gateway/gateway</outputDirectory>
+            <includes>
+                <include>module-deploy.xml</include>
+                <include>module-version.xml</include>
+            </includes>
+        </fileSet>
+        <!-- documentation -->
+        <fileSet>
+            <directory>../documentation</directory>
+            <outputDirectory>Gateway/documentation</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>../service/target</directory>
+            <outputDirectory>Gateway/gateway/services</outputDirectory>
+            <includes>
+                <include>*.war</include>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <dependencySets>
+        <!-- database -->
+        <dependencySet>
+            <includes>
+                <include>ru.diasoft.micro:gateway-db</include>
+            </includes>
+            <unpack>false</unpack>
+            <outputDirectory>Gateway/gateway/database</outputDirectory>
+            <outputFileNameMapping>db-manager-${artifact.version}.${artifact.extension}</outputFileNameMapping>
+        </dependencySet>
+    </dependencySets>
+</assembly>
