@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="discovery" />
-        <module name="discovery-db" />
+        <module name="service-discovery" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="discovery" target="1.5" />
-      <module name="discovery-bundle" target="1.5" />
-      <module name="discovery-db" target="1.5" />
-      <module name="discovery-parent" target="1.5" />
+      <module name="service-discovery" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="service-discovery" options="-parameters" />
+    </option>
   </component>
 </project>

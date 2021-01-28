@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: ${SERVICE_NAME:gateway}
-
-mdp.discovery:
-  discoveryClientName: ${DISCOVERY_CLIENT_NAME:disable}

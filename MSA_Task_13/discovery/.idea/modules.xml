@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/service/discovery.iml" filepath="$PROJECT_DIR$/service/discovery.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bundle/discovery-bundle.iml" filepath="$PROJECT_DIR$/bundle/discovery-bundle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/database/discovery-db.iml" filepath="$PROJECT_DIR$/database/discovery-db.iml" />
-      <module fileurl="file://$PROJECT_DIR$/discovery-parent.iml" filepath="$PROJECT_DIR$/discovery-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-discovery.iml" filepath="$PROJECT_DIR$/service-discovery.iml" />
     </modules>
   </component>
 </project>

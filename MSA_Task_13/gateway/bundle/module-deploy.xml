@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module>
-    <sysname>gateway</sysname>
-    <name>gateway</name>
-    <description>gateway</description>
-    <project>gateway</project>
-    <msa>true</msa>
-    <config></config>
-</module>
