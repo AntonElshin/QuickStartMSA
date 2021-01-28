@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae7a1f10-9e38-457e-abce-a24985cbc28f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/domain/SmsVerification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/model/SmsDeliveredMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/model/SmsVerificationMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/publish/SmsVerificationMessageDeliveredChannelConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/publish/SmsVerificationMessageDeliveredGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/subscriber/ConsumerChannels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/subscriber/TaskStreamListeners.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/repository/SmsVerificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/repository/SmsVerificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/service/SmsVerificationPrimaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/service/SmsVerificationPrimaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/src/test/java/ru/diasoft/micro/repository/SmsVerificationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/test/java/ru/diasoft/micro/repository/SmsVerificationRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gateway/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611822886070</updated>
-      <workItem from="1611822887318" duration="4092000" />
+      <workItem from="1611822887318" duration="6880000" />
     </task>
     <servers />
   </component>

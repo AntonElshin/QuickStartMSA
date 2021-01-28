@@ -5,15 +5,162 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8a2f9c7-f860-4331-b8dc-079caf3f9a7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/config/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/smsverificationdelivered/subscribe/SmsVerificationDeliveredSubscribeListenerPrimaryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/dstrace-warning.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/model/SmsDeliveredMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/model/SmsVerificationMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/publisher/ProducerChannels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/publisher/SmsVerificationDeliveredPublishGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/subscriber/ConsumerChannels.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/java/ru/diasoft/micro/subscriber/SmsVerificationMessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smsadapter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Commands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/dependency-maven-plugin-markers/ru.diasoft.fa.database-database-manager-core-jar-9.04.03-200702011293083" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/META-INF/maven/ru.diasoft.fa.database/database-manager-core/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/META-INF/maven/ru.diasoft.fa.database/database-manager-core/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/binary-with-deps.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/developer.readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/dm.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/dm.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/readme_en.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/parent/readme_en.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/task-db-0.0.1-SNAPSHOT/dm.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/task-db-0.0.1-SNAPSHOT/dm.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/task-db-0.0.1-SNAPSHOT/postgres_update_db.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/task-db-0.0.1-SNAPSHOT/readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/database/target/task-db-0.0.1-SNAPSHOT/readme_en.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/service/SmsVerificationPrimaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/java/ru/diasoft/micro/service/SmsVerificationPrimaryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/META-INF/build-info.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/dependency-maven-plugin-markers/ru.diasoft.micro-task-db-jar-0.0.1-SNAPSHOT1293083" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/jacoco.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/branchfc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/branchnc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/branchpc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/bundle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/class.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/down.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/greenbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/group.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/method.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/package.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/redbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/report.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/session.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/sort.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/source.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-resources/up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/jacoco.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/RestTemplateConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/RestTemplateConfig.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/SecurityConfig.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/SecurityConfig.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/ServletInitializer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/ServletInitializer.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.config/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.controller/SmsVerificationController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.controller/SmsVerificationController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.controller/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.controller/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckRequest.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckRequestMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckRequestMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckResponse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckResponse.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckResponseMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationCheckResponseMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostRequest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostRequest.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostRequestMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostRequestMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostResponse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostResponse.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostResponseMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/SmsVerificationPostResponseMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.domain/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsDeliveredMessage$SmsDeliveredMessageBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsDeliveredMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsDeliveredMessage.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsDeliveredMessageMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsDeliveredMessageMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsVerificationMessage$SmsVerificationMessageBuilder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsVerificationMessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsVerificationMessage.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsVerificationMessageMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/SmsVerificationMessageMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.model/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.service/SmsVerificationServiceMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.service/SmsVerificationServiceMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.service/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.service/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeChannelBinding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeChannelBinding.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeListener.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeListenerServiceMock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/SmsVerificationDeliveredSubscribeListenerServiceMock.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationdelivered.subscribe/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/SmsVerificationMessagePublishChannelBinding.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/SmsVerificationMessagePublishChannelBinding.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/SmsVerificationMessagePublishMockController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/SmsVerificationMessagePublishMockController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro.smsverificationmessage.publish/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro/TaskApplication.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro/TaskApplication.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/site/jacoco/ru.diasoft.micro/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.CayenneDependencyTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.ControllerMethodReturnTypeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.ControllerOutsideAccessTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.ControllerShouldContainAPITest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.ControllerTransactionalTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.EntityLocateDomainTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.NamingConventionTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.NamingPackageTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/TEST-ru.diasoft.micro.archunit.SwaggerAnnotationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.CayenneDependencyTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.ControllerMethodReturnTypeTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.ControllerOutsideAccessTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.ControllerShouldContainAPITest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.ControllerTransactionalTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.EntityLocateDomainTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.NamingConventionTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.NamingPackageTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/surefire-reports/ru.diasoft.micro.archunit.SwaggerAnnotationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/task-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/1.00.01/1.00.01.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/META-INF/maven/ru.diasoft.micro/task-db/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/META-INF/maven/ru.diasoft.micro/task-db/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/rootChangeLog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/target/test-classes/liquibase-extracted/version/version.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/service/task.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/service/task.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../discovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../discovery/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +227,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611822911615</updated>
-      <workItem from="1611822912890" duration="4866000" />
+      <workItem from="1611822912890" duration="7686000" />
     </task>
     <servers />
   </component>

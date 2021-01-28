@@ -59,7 +59,7 @@ spring:
         eventHelloPublish:
           destination: event-hello
         eventHelloSubscribe:
-          destination: event-hello 
+          destination: event-hello
   messages:
     basename: i18n.messages
         

@@ -20,7 +20,7 @@ import java.util.UUID;
 public class SmsVerificationPrimaryService implements SmsVerificationService {
 
     private final SmsVerificationRepository repository;
-    //private final SmsVerificationMessagePublishGateway publishGateway;
+    private final SmsVerificationMessagePublishGateway publishGateway;
 
     @Override
     public SmsVerificationCheckResponse dsSmsVerificationCheck(SmsVerificationCheckRequest smsVerificationCheckRequest) {
@@ -46,7 +46,7 @@ public class SmsVerificationPrimaryService implements SmsVerificationService {
 
         repository.save(smsVerification);
 
-        //publishGateway.smsVerificationMessage(SmsVerificationMessage.builder().guid(smsVerification.getProcessGuid()).build());
+        publishGateway.smsVerificationMessage(SmsVerificationMessage.builder().quid(smsVerification.getProcessGuid()).build());
 
         return new SmsVerificationPostResponse(guid);
 

@@ -1,0 +1,24 @@
+Необходимо задать имя сервиса для идентификации его в графе трассировки.
+Сделать это можно через файл имя [имя сервиса]-config.xml - параметр dstracer-service 
+или файл application.yml - параметр dstrace.service или spring.application.name 
+
+[пример 1 [имя сервиса]-config.xml]
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    ...
+    <dstracer-service>MyService</dstracer-service>
+    ...
+</root>
+
+[пример 2 application.yml]
+...
+dstrace:
+  service: MyService
+...
+
+[пример 3 application.yml]
+...
+spring:
+    application:
+        name: MyService
+...

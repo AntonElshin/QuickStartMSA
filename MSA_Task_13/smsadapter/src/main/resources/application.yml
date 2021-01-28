@@ -1,0 +1,87 @@
+server:
+  port: 7082
+  servlet:
+    context-path: /${SERVICE_NAME:adapter}
+
+spring:
+#  datasource:
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/demo
+#    username: postgres
+#    password: 123
+#    hikari:
+#      connection-test-query:
+#  jpa:
+#    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+#    show-sql: true
+#    generate-ddl: false
+#    hibernate:
+#      ddl-auto: none
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#    properties:
+#      hibernate:
+#        globally_quoted_identifiers: true # Для PostgreSQL установить в true, для MSSQL, Oracle в false
+#        jdbc:
+#          time_zone: UTC
+#          lob:
+#            non_contextual_creation: true
+
+  # Oracle
+  #  datasource:
+  #    driverClassName: oracle.jdbc.OracleDriver
+  #    url: jdbc:oracle:thin:@aml2devops:1521:tstdf
+  #    username: TEMPLATE
+  #    password: TEMPLATE
+  #    hikari:
+  #      connection-test-query:
+  #  jpa:
+  #    database-platform: org.hibernate.dialect.Oracle10gDialect
+  #    show-sql: true
+  #    generate-ddl: false
+  #    hibernate:
+  #      ddl-auto: none
+  #      naming:
+  #        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  #    properties:
+  #      hibernate:
+  #        globally_quoted_identifiers: false # Для PostgreSQL установить в true, для MSSQL, Oracle в false
+  #        jdbc:
+  #          time_zone: UTC
+  #          lob:
+  #            non_contextual_creation: true
+
+  # h2
+  #  datasource:
+  #    driverClassName: org.h2.Driver
+  #    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+  #    username: sa
+  #    password:
+  #  jpa:
+  #    database-platform: org.hibernate.dialect.H2Dialect
+  #    show-sql: true
+  #    generate-ddl: true
+  #    hibernate:
+  #      ddl-auto: none
+  #      naming:
+  #        physical-strategy: ru.diasoft.micro.lib.config.H2PhysicalNamingStrategy
+  #    properties:
+  #      hibernate:
+  #        jdbc:
+  #          time_zone: UTC
+  #          lob:
+  #            non_contextual_creation: true
+  # Generate Events Publisher or Subsriber
+  kafka:
+    bootstrap-servers: localhost:9092
+  cloud:
+    stream:
+      binders:
+        binderName:
+          type: kafka
+      bindings:
+        smsVerificationDeliveredPublish:
+          destination: sms-verification-delivered
+        smsVerificationMessageSubscribe:
+          destination: sms-verification
+          group: sms-verification
