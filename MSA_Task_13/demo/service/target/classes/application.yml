@@ -56,11 +56,10 @@ spring:
         binderName:
           type: kafka
       bindings:
-        smsVerificationMessagePublish:
-          destination: sms-verification
-        smsVerificationDeliveredSubscribe:
-          destination: sms-verification-delivered
-          group: sms-verification
+        eventHelloPublish:
+          destination: event-hello
+        eventHelloSubscribe:
+          destination: event-hello
   messages:
     basename: i18n.messages
         

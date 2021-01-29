@@ -9,12 +9,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @ApiModel(value = "SmsVerificationPostRequest", description = "")
 @JsonFilter("DynamicExclude")
 public class SmsVerificationPostRequest implements Serializable {

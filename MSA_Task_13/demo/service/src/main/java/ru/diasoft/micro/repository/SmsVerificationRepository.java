@@ -14,6 +14,8 @@ public interface SmsVerificationRepository extends JpaRepository<SmsVerification
     Optional<SmsVerification> findBySecretCodeAndProcessGuidAndStatus(
             String secretCode, String processGuid, String status);
 
+    Optional<SmsVerification> findByPhoneNumberEquals(String phoneNumber);
+
     @Transactional
     @Modifying
     @Query("update SmsVerification v set status = ?1 where processGuid = ?2")
